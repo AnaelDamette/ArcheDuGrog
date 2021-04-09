@@ -1,0 +1,105 @@
+//import de mon scss
+
+
+@import "./variable.scss";
+
+* {
+    font-family: Open ;
+    background: $primary;
+    object-fit: cover;
+}
+p {
+    font-size: 18px;
+}
+
+
+.zindex-1 {
+    z-index: 10;
+}
+.zindex-2 {
+    z-index: 100;
+}
+.zindex-0 {
+    z-index:0;
+}
+
+.mw-75 {
+    max-width: 75%;
+}
+a,
+.lien-discord {
+    color:$text-primary;
+    &:hover,
+    &:focus {
+        color: $text-primary-hover !important;
+        border: $text-primary-hover;
+        text-decoration:none!important;
+    }
+}
+.lien-discord-img {
+    padding: 2px;
+    border-radius: 50%;
+    &:hover,
+    &:focus { 
+        box-shadow : 0px 0px 10px 1px  $text-primary-hover;
+    }
+}
+.image-responsive {
+    width: 50%;
+    min-width: 150px;
+    max-width: 220px;
+    @media (min-width : 768px) {
+        width: 220px;
+        min-width: auto;
+    }
+}
+
+.bg-primaire {
+    background:$primary;
+}
+
+.text-primaire {
+    color: $text-primary !important
+}
+.text-secondaire {
+    color: $secondary !important
+}
+.text-primaire-hover {
+    color: $text-primary-hover !important
+}
+
+.cover {
+    object-fit: cover
+}
+
+.shadow-box {
+    @include shadow-box;
+    &:hover, &:focus {
+        @include shadow-box-hover;
+    }
+}
+
+.shadow-text {
+    filter: brightness(1.25);
+    @include shadow-text;
+    &:hover, &:focus {
+        @include shadow-text-hover;
+    }
+}
+.grog-background {
+    background-color: rgba(255, 255, 128, 0.6);
+    background-image: url("../assets/imagePresentationGrog.jpg");
+    background-size: cover;
+}
+.test {
+    width: 100%;
+    height: 300px;
+    background: transparent;
+}
+
+
+
+//Modifier le Scss au dessus des imports !!
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "node_modules/bootstrap-vue/src/index.scss";
