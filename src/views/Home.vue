@@ -10,8 +10,8 @@
       />
       <video
         class="position-absolute cover bg-transparent"
-        autoplay="true"
-        preload="auto"
+        id="video-presentation"
+        autoplay
         loop
       >
         <source
@@ -34,6 +34,10 @@ export default {
   name: "Home",
   components: {
     PresentationGrog,
+  },
+  created(){
+    let videoPresentation = document.querySelector('#video-presentation');
+
   },
 };
 </script>

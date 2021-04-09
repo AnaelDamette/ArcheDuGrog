@@ -2,17 +2,21 @@
 
 
 @import "./variable.scss";
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Merienda:wght@700&family=New+Tegomin&display=swap');
 
 * {
-    font-family: Open ;
+    font-family: 'Courgette', Open ;
     background: $primary;
     object-fit: cover;
 }
 p {
     font-size: 18px;
+    font-family: 'Merienda','New Tegomin', 'Courgette', arial, sans-serif;
 }
 
-
+.bg-dark-opacity {
+    background-color: rgba(0, 0, 0, 0.75);
+}
 .zindex-1 {
     z-index: 10;
 }
@@ -49,7 +53,7 @@ a,
     min-width: 150px;
     max-width: 220px;
     @media (min-width : 768px) {
-        width: 220px;
+        width: 100%;
         min-width: auto;
     }
 }
@@ -82,9 +86,6 @@ a,
 .shadow-text {
     filter: brightness(1.25);
     @include shadow-text;
-    &:hover, &:focus {
-        @include shadow-text-hover;
-    }
 }
 .grog-background {
     background-color: rgba(255, 255, 128, 0.6);
